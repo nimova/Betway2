@@ -32,20 +32,19 @@ public class Test2 {
 				
 				String TestFile = "D:\\test2.txt";
 				
-				File FC = new File(TestFile);//Created object of java File class.
+				File FC = new File(TestFile);
 				FC.createNewFile();//Create file.
 				
 				//Writing In to file.
-				//Create Object of java FileWriter and BufferedWriter class.
+
 				FileWriter FW = new FileWriter(TestFile);
 				BufferedWriter BW = new BufferedWriter(FW);
-				//BW.write(writeToFile.getText()); //Writing In To File.
-				//BW.newLine();//To write next string on new line.
+
 				
 	        	
 	        	for(WebElement ele : header)
 				{
-					BW.write("Headline" + ele.getText());
+					BW.write("Headline " + ele.getText());
 					BW.newLine();
 					System.out.println(ele.getText());	
 				}	
